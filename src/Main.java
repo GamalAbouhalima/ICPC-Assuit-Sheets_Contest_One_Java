@@ -11,8 +11,26 @@ public class Main {
         double totalBeforeTheDiscount=(deducted*discount)+priceAfterDiscount; // (0.235*15)+20=23.529
         System.out.println(totalBeforeTheDiscount);
     }
+    static void Memo_and_Momo(){
+        Scanner scan=new Scanner(System.in);
+        long a=scan.nextLong();
+        long b=scan.nextLong();
+        long k=scan.nextLong();
+
+        if(a%k==0 && b%k==0){
+            System.out.println("Both");
+        } else if (a%k==0 && b%k!=0) {
+            System.out.println("Memo");
+        }else if (b%k==0 && a%k!=0) {
+            System.out.println("Momo");
+        } else if(a%k!=0 && b%k!=0){
+            System.out.println("No One");
+        }
+
+    }
     public static void main(String[] args) {
-        Winter_Sale();
+//        Winter_Sale();
+        Memo_and_Momo();
 
 
     }
