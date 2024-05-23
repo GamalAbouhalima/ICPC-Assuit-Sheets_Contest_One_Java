@@ -28,10 +28,26 @@ public class Main {
         }
 
     }
+    static void Next_Alphabet(){
+        Scanner scan=new Scanner(System.in);
+        char letter=scan.next().charAt(0);
+        int asciiNum=letter;
+        if(asciiNum>=97 &&asciiNum<122){
+            asciiNum++;
+            char l=(char)asciiNum;
+            System.out.println(l);
+
+        }else {
+            asciiNum=122-25;
+            char l=(char)asciiNum;
+            System.out.println(l);
+        }
+
+    }
     public static void main(String[] args) {
 //        Winter_Sale();
-        Memo_and_Momo();
-
+//        Memo_and_Momo();
+        Next_Alphabet();
 
     }
 
