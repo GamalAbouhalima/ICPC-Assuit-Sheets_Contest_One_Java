@@ -44,11 +44,35 @@ public class Main {
         }
 
     }
+    static void  Ali_Baba_and_Puzzles(){
+        Scanner scan=new Scanner(System.in);
+        long a=scan.nextLong();
+        long b=scan.nextLong();
+        long c=scan.nextLong();
+        long d=scan.nextLong();
+
+        long res1=a*b-c;
+        long res2=a*b+c;
+        long res3=a-(b*c);
+
+        long res4=a+(b*c);
+        long res5=a+b-c;
+        long res6=a-b+c;
+        
+
+        if(res1==d ||res2==d ||res3==d ||res4==d ||res5==d ||res6==d){
+            System.out.println("YES");
+        }else {
+            System.out.println("NO");
+        }
+
+
+    }
     public static void main(String[] args) {
 //        Winter_Sale();
 //        Memo_and_Momo();
-        Next_Alphabet();
-
+//        Next_Alphabet();
+        Ali_Baba_and_Puzzles();
     }
 
 }
