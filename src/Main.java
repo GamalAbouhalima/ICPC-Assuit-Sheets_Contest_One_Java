@@ -68,11 +68,24 @@ public class Main {
 
 
     }
+    static void Interval_Sweep(){
+        Scanner scan=new Scanner(System.in);
+        int a=scan.nextInt();
+        int b =scan.nextInt();
+        int c=a-b;
+       if((a==0 && b==0)||Math.abs(c) >= 2){
+           System.out.println("NO");
+       }else{
+           System.out.println("YES");
+       }
+
+    }
     public static void main(String[] args) {
 //        Winter_Sale();
 //        Memo_and_Momo();
 //        Next_Alphabet();
-        Ali_Baba_and_Puzzles();
+//        Ali_Baba_and_Puzzles();
+        Interval_Sweep();
     }
 
 }
