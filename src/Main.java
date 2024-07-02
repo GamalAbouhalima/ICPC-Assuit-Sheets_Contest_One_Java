@@ -118,6 +118,26 @@ public class Main {
 
 
     }
+    static void DataTypeGuessing(){
+        Scanner scan=new Scanner(System.in);
+        double n=scan.nextDouble();
+        double k=scan.nextDouble();
+        double a=scan.nextDouble();
+
+        double res=n * k /a;
+         long myNumber= (long) res;
+
+        double myRes=res-myNumber;
+        if(myRes>0){
+            System.out.println("double");
+        }else if(myNumber<=2147483647) {
+            System.out.println("int");
+        }else{
+            System.out.println("long long");
+        }
+
+
+    }
     public static void main(String[] args) {
 //        Winter_Sale();
 //        Memo_and_Momo();
@@ -125,7 +145,8 @@ public class Main {
 //        Ali_Baba_and_Puzzles();
 //        Interval_Sweep();
 //        Adding_Bits();
-        Katryoshka();
+//        Katryoshka();
+        DataTypeGuessing();
     }
 
 }
