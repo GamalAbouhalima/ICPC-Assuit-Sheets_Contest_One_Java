@@ -1,4 +1,4 @@
-Contest #1 [Java]
+* Contest #1 [Java]
 A problem is a function. If you want to run the problem , delete the comment.
 Example:-
 import java.util.Scanner;
