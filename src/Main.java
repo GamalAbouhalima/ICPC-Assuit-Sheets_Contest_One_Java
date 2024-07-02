@@ -88,13 +88,44 @@ public class Main {
         System.out.println(c);
 
     }
+
+    static void Katryoshka(){
+        Scanner scan=new Scanner(System.in);
+        long eyes=scan.nextLong();
+        long mouth=scan.nextLong();
+        long body=scan.nextLong();
+        long katryoshka=0;
+
+        if(eyes==0 || body==0){
+            System.out.println(0);
+        }else {
+            if((mouth >= eyes && mouth >= body)||
+                    (mouth >= body && mouth < eyes)
+                    || (mouth < body && mouth >= eyes)){
+
+                katryoshka=Math.min(eyes,body);
+                System.out.println(katryoshka);
+
+            }else if (mouth < eyes && mouth < body){
+                katryoshka=mouth;
+                eyes-=mouth;
+                body-=mouth;
+                katryoshka+=Math.min(eyes/2,body);
+                System.out.println(katryoshka);
+            }
+        }
+
+
+
+    }
     public static void main(String[] args) {
 //        Winter_Sale();
 //        Memo_and_Momo();
 //        Next_Alphabet();
 //        Ali_Baba_and_Puzzles();
 //        Interval_Sweep();
-        Adding_Bits();
+//        Adding_Bits();
+        Katryoshka();
     }
 
 }
