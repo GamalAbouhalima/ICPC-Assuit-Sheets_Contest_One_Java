@@ -58,7 +58,7 @@ public class Main {
         long res4=a+(b*c);
         long res5=a+b-c;
         long res6=a-b+c;
-        
+
 
         if(res1==d ||res2==d ||res3==d ||res4==d ||res5==d ||res6==d){
             System.out.println("YES");
@@ -138,6 +138,21 @@ public class Main {
 
 
     }
+    static void  LuckyNumbers(){
+        Scanner scan=new Scanner(System.in);
+        double number=scan.nextDouble();
+            int firstNumber=(int)number/10;
+            int secondNumber= (int) (number%10);
+            if (secondNumber==0){
+                System.out.println("YES");
+            }
+                else if(firstNumber%secondNumber==0 || secondNumber%firstNumber==0){
+                System.out.println("YES");
+            }   else {
+                System.out.println("NO");
+            }
+
+    }
     public static void main(String[] args) {
 //        Winter_Sale();
 //        Memo_and_Momo();
@@ -146,7 +161,8 @@ public class Main {
 //        Interval_Sweep();
 //        Adding_Bits();
 //        Katryoshka();
-        DataTypeGuessing();
+//        DataTypeGuessing();
+        LuckyNumbers();
     }
 
 }
